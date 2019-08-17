@@ -226,21 +226,21 @@ a {
 }
 
 .header-text h1 {
-    margin-bottom: 2.5rem;
+    margin-bottom: 3rem;
     font-family: var(--main-logo-font);
-    font-size: 4rem;
+    font-size: 5rem;
     text-transform: uppercase;
     text-shadow: 2px 2px 2px #000000;
 }
 
 .header-text h1 span {
-    font-size: 5rem;
+    font-size: 6rem;
 }
 
 .header-text h2 {
     font-family: var(--main-cursive-font);
     color: var(--main-yellow-color);
-    font-size: 1.8rem;
+    font-size: 2rem;
     position: relative;
 }
 

@@ -8,6 +8,7 @@ $( document ).ready(function() {
 
   $('.nav-link').on('click', function() {
     $('.overlay').toggleClass('menu-open');
+    $('.menu').toggleClass('active');
   });
 
   $('.main-btn').on('click', function() {
