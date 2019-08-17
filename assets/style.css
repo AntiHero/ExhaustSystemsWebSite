@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface|Permanent+Marker|Roboto:100,300,400,400i,500,500i,700,700i,900,900i&display=swap&subset=cyrillic,cyrillic-ext');
+@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap&subset=cyrillic,cyrillic-ext');
+@font-face {
+    font-family: "Bebas Neue Regular";
+    src: url('fonts/BebasNeue.ttf');
+}
+
+/*Global styles*/
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --main-yellow-color: #ffec42;
+    --main-white: #ffffff;
+    --main-font-dark-gray: #4d4d4d;
+    --main-footer-bg-color: #141414;
+    --main-font-family: "Roboto", sans-serif;
+    --main-logo-font: "Abril Fatface", cursive;
+    --main-cursive-font: "Permanent Marker", cursive;
+}
+
+section {
+    padding: 6rem 0;
+}
+
+p {
+    line-height: 1.5;
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: var(--main-font-dark-gray);
+}
+
+a {
+    text-decoration: none;
+    color: var(--main-white);
+}
+/*Reusable classes*/
+.btn {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+
+/*Header*/
+.header {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, .9), transparent),
+                url("img/hero.jpg") bottom no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    justify-content: center;
+}
+
+.main-btn {
+    font-size: 1.5rem;
+    border: 2px solid var(--main-yellow-color);
+    padding: 2rem 2.5rem;
+    letter-spacing: 3px;
+    margin-right: -3px;
+    position: relative;
+    margin-top: 3rem;
+    transition: all .5s;
+    border-radius: 25px;
+}
+
+.main-btn:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+.main-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2);
+}
+
+
+/*Header - Nav Toggle*/
+.menu {
+    padding: 2rem 2.5rem;
+    position: fixed;
+    top: 3rem;
+    right: 3rem;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 999;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.menu .bar,
+.menu .bar::before,
+.menu .bar::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 4rem;
+    background-color: var(--main-white);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    transition: all .5s;
+}
+
+.menu .bar::before {
+    top: -2rem;
+}
+
+.menu .bar::after {
+    top: 2rem;
+}
+
+.active .bar {
+    background-color: transparent;
+}
+
+.active .bar::before {
+    transform: rotate(225deg);
+}
+
+.active .bar::after {
+    transform: rotate(-225deg);
+
+}
+
+.active .bar::before,
+.active .bar::after {
+    top: 0;
+}
+
+.nav {
+    width: 100%;
+    height: 6rem;
+    line-height: 6rem;
+    position: relative;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, .95);
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    transition: all .5s;
+    transform: scale(0);
+    opacity: 0;
+}
+
+.overlay.menu-open {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.nav .overlay ul {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav .overlay ul li {
+    text-transform: uppercase;
+    
+}
+
+.nav .overlay ul li a:after {
+    display:block;
+    content: '';
+    margin-top: -10px;
+    border-bottom: solid 3px #f5e613;  
+    transform: scaleX(0);  
+    transition: transform 250ms ease-in-out;
+}
+
+.nav .overlay ul li a:hover:after {
+    transform: scaleX(1);
+    transform-origin:100% 50%;
+}
+
+.nav .overlay ul li a {
+    display: block;
+    font-size: 2rem;
+    transition: all .5s;
+    font-weight: 900;
+    letter-spacing: 2px;
+    font-family: 'Bebas Neue Regular', sans-serif;
+}
+
+.nav .overlay ul li a:hover,
+.nav .overlay ul li a .active:active {
+    border-bottom-color: var(--main-yellow-color);
+}
+
+
+/*Header - Nav*/
+
+/*Header - Main Text*/
+.header-text {
+    line-height: 0;
+    margin: 0;
+    color: var(--main-white);
+    user-select: none;
+}
+
+.header-text h1 {
+    margin-bottom: 2.5rem;
+    font-family: var(--main-logo-font);
+    font-size: 4rem;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 2px #000000;
+}
+
+.header-text h1 span {
+    font-size: 5rem;
+}
+
+.header-text h2 {
+    font-family: var(--main-cursive-font);
+    color: var(--main-yellow-color);
+    font-size: 1.8rem;
+    position: relative;
+}
+
+/*Section - About*/
+
+/*Section - Projects*/
+
+/*Section - Order*/
+
+/*Footer*/
