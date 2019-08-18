@@ -22,9 +22,12 @@ $( document ).ready(function() {
     effect: 'coverflow',
     grabCursor: true,
     centeredSlides: true,
-    slidesPerView: 'auto',
+    slidesPerView: 1,
+    loop: true,
+    observer: true,
+    loopedSlides: 7,
     coverflowEffect: {
-      rotate: 50,
+      rotate: 15,
       stretch: 0,
       depth: 100,
       modifier: 1,
@@ -34,4 +37,31 @@ $( document ).ready(function() {
       el: '.swiper-pagination',
     },
   });
+
+  function checkWidth() {
+    let windowsize = $(document).width();
+
+    if (windowsize < 1024) {
+      swiper.params.slidesPerView = 1;
+      swiper.update();
+    }
+
+    if (windowsize >= 1024) {
+      swiper.params.slidesPerView = 2;
+      swiper.update();
+    } 
+    
+    if (windowsize >= 1377) {
+      swiper.params.slidesPerView = 3;
+      swiper.update();
+    } 
+  }
+
+  checkWidth();
+
+  $(window).resize(() => {checkWidth(); console.log('resizing')});
+
+  $('.swiper-slide').on('click', function() {
+    $('body').append('<div class="zoomable">hello</div>');   
+  })
 });
