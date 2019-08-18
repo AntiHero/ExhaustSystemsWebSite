@@ -332,3 +332,10 @@ a {
 /*Section - Order*/
 
 /*Footer*/
+
+/*Media queries*/
+@media (max-width: 767px) {
+    .main-about__maxhaust {
+        background-attachment: initial;
+    }
+}
