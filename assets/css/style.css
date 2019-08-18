@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Lobster&display=swap&subset=cyrillic,cyrillic-ext');
 @font-face {
     font-family: "Bebas Neue Regular";
-    src: url('fonts/BebasNeue.ttf');
+    src: url('../fonts/BebasNeue.ttf');
 }
 
 /*Global styles*/
@@ -18,12 +18,19 @@ html {
     font-size: 10px;
     font-family: 'Roboto', sans-serif;
     scroll-behavior: smooth;
+    background: rgba(10,10,10,1);
+    background: -moz-linear-gradient(left, rgba(10,10,10,1) 0%, rgba(36,36,36,1) 12%, rgba(51,48,51,1) 25%, rgba(54,50,54,1) 39%, rgba(56,56,56,1) 50%, rgba(56,55,56,1) 51%, rgba(51,49,51,1) 60%, rgba(43,43,43,1) 76%, rgba(28,28,28,1) 91%, rgba(19,19,19,1) 100%);
+    background: -webkit-linear-gradient(left, rgba(10,10,10,1) 0%, rgba(36,36,36,1) 12%, rgba(51,48,51,1) 25%, rgba(54,50,54,1) 39%, rgba(56,56,56,1) 50%, rgba(56,55,56,1) 51%, rgba(51,49,51,1) 60%, rgba(43,43,43,1) 76%, rgba(28,28,28,1) 91%, rgba(19,19,19,1) 100%);
+    background: -o-linear-gradient(left, rgba(10,10,10,1) 0%, rgba(36,36,36,1) 12%, rgba(51,48,51,1) 25%, rgba(54,50,54,1) 39%, rgba(56,56,56,1) 50%, rgba(56,55,56,1) 51%, rgba(51,49,51,1) 60%, rgba(43,43,43,1) 76%, rgba(28,28,28,1) 91%, rgba(19,19,19,1) 100%);
+    background: -ms-linear-gradient(left, rgba(10,10,10,1) 0%, rgba(36,36,36,1) 12%, rgba(51,48,51,1) 25%, rgba(54,50,54,1) 39%, rgba(56,56,56,1) 50%, rgba(56,55,56,1) 51%, rgba(51,49,51,1) 60%, rgba(43,43,43,1) 76%, rgba(28,28,28,1) 91%, rgba(19,19,19,1) 100%);
+    background: linear-gradient(to right, rgba(10,10,10,1) 0%, rgba(36,36,36,1) 12%, rgba(51,48,51,1) 25%, rgba(54,50,54,1) 39%, rgba(56,56,56,1) 50%, rgba(56,55,56,1) 51%, rgba(51,49,51,1) 60%, rgba(43,43,43,1) 76%, rgba(28,28,28,1) 91%, rgba(19,19,19,1) 100%);
 }
 
 :root {
     --main-yellow-color: #ffec42;
     --main-white: #ffffff;
     --main-font-dark-gray: #4d4d4d;
+    --main-font-light-gray: #e4e4e4;
     --main-footer-bg-color: #141414;
     --main-font-family: "Roboto", sans-serif;
     --main-logo-font: "Abril Fatface", cursive;
@@ -31,14 +38,14 @@ html {
 }
 
 section {
-    padding: 6rem 0;
+    padding: 3rem 0;
 }
 
 p {
     line-height: 1.5;
     font-size: 1.8rem;
     font-weight: 300;
-    color: var(--main-font-dark-gray);
+    color: var(--main-font-light-gray);
 }
 
 a {
@@ -55,13 +62,47 @@ a {
     outline: none;
 }
 
+.custom-font {
+    font-family: var(--main-font-family);
+    color: var(--main-white);
+    display: none;
+}
+
+.custom-font-secondary {
+    font-family: 'Bebas Neue Regular', sans-serif;
+    font-size: 3rem;
+    color: var(--main-white);
+    border-top: 3px solid var(--main-font-dark-gray);
+    display: inline-block;
+}
+
+.custom-font-secondary::first-letter {
+    color: var(--main-yellow-color);
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.container .custom-font-secondary {
+    text-align: left;
+}
+
+.container p {
+    text-align: justify;
+}
+
+.icon {
+    color: white;
+}
 
 /*Header*/
 .header {
     width: 100%;
     height: 100vh;
     background: linear-gradient(to bottom, rgba(0, 0, 0, .9), transparent),
-                url("img/hero.jpg") bottom no-repeat;
+                url("../img/hero.jpg") bottom no-repeat;
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -189,7 +230,7 @@ a {
 .nav .overlay ul li a:after {
     display:block;
     content: '';
-    margin-top: -10px;
+    margin-top: -20px;
     border-bottom: solid 3px #f5e613;  
     transform: scaleX(0);  
     transition: transform 250ms ease-in-out;
@@ -229,6 +270,7 @@ a {
     margin-bottom: 3rem;
     font-family: var(--main-logo-font);
     font-size: 5rem;
+    font-weight: 100;
     text-transform: uppercase;
     text-shadow: 2px 2px 2px #000000;
 }
@@ -245,8 +287,47 @@ a {
 }
 
 /*Section - About*/
+.main-about__maxhaust {
+    margin-top: 3rem;
+    width: 100%;
+    min-height: 30rem;
+    background: url('../img/maxhaust.jpg') center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
 
-/*Section - Projects*/
+.main-about__video-container-wrapper {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.main-about__video-container {
+    margin-top: 2.5rem;
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0; 
+    width: 100%;
+}
+    
+.main-about__video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+/*Section - Gallery*/
+.swiper-container {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 400px;
+}
 
 /*Section - Order*/
 
