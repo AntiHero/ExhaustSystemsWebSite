@@ -28,6 +28,8 @@ html {
 
 
 :root {
+    --x: 0px;
+    --y: 0px;
     --main-yellow-color: #ffec42;
     --main-white: #ffffff;
     --main-font-dark-gray: #4d4d4d;
@@ -320,9 +322,6 @@ a {
 }
 
 /*Section - Gallery*/
-.main-projects {
-    position: relative;
-}
 
 .swiper-container {
     width: 100%;
@@ -337,6 +336,15 @@ a {
     height: 400px;
 }
 
+/* .zoomable {
+    position: absolute;
+    z-index: 101;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: white;
+} */
 
 /*Section - Order*/
 
