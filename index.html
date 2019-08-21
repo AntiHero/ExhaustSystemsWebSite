@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  
+
   <!-- Swiper css -->
   <link rel="stylesheet" href="assets/css/swiper.min.css">
 
@@ -21,6 +21,8 @@
 
   <!-- Swiper -->
   <script type="text/javascript" src="assets/js/swiper.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
   <title>MaxhausT</title>
 </head>
 <body>
@@ -36,6 +38,7 @@
           <li><a class="nav-link" href="#examples">Галерея</a></li>
           <li><a class="nav-link" href="#videos">Видео</a></li>
           <li><a class="nav-link" href="#order">Заказать</a></li>
+          <li><a class="nav-link" href="#contacts">Контакты</a></li>
         </ul>
       </div>
     </nav>
@@ -66,37 +69,55 @@
       <div class="container">
         <h1 class="custom-font">Текст</h1>
         <h2 class="custom-font-secondary">Галерея</h2>
-        <div class="swiper-container">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide" style="background-image:url(assets/img/gallery/maxhaust-1.jpg)"></div>
-            <div class="swiper-slide" style="background-image:url(assets/img/gallery/maxhaust-2.jpg)"></div>
-            <div class="swiper-slide" style="background-image:url(assets/img/gallery/maxhaust-3.jpg)">
-            
-            </div>
-            <div class="swiper-slide" style="background-image:url(assets/img/gallery/maxhaust-4.jpg)">
-            
-            </div>
-            <div class="swiper-slide" style="background-image:url(assets/img/gallery/maxhaust-5.jpg)">
-            
-            </div>
-            <div class="swiper-slide" style="background-image:url(assets/img/gallery/maxhaust-6.jpg)">
-            
-            </div>
-            <div class="swiper-slide" style="background-image:url(assets/img/gallery/maxhaust-7.jpg)">
-            
-            </div>
+        <div class="swiper-container swiper-container-gallery">
+          <div class="swiper-wrapper swiper-wrapper-gallery">
+            <div class="swiper-slide swiper-slide-gallery" style="background-image:url(assets/img/gallery/maxhaust-1.jpg)"></div>
+            <div class="swiper-slide swiper-slide-gallery" style="background-image:url(assets/img/gallery/maxhaust-2.jpg)"></div>
+            <div class="swiper-slide swiper-slide-gallery" style="background-image:url(assets/img/gallery/maxhaust-3.jpg)"></div>
+            <div class="swiper-slide swiper-slide-gallery" style="background-image:url(assets/img/gallery/maxhaust-4.jpg)"></div>
+            <div class="swiper-slide swiper-slide-gallery" style="background-image:url(assets/img/gallery/maxhaust-5.jpg)"></div>
+            <div class="swiper-slide swiper-slide-gallery" style="background-image:url(assets/img/gallery/maxhaust-6.jpg)"></div>
+            <div class="swiper-slide swiper-slide-gallery" style="background-image:url(assets/img/gallery/maxhaust-7.jpg)"></div>
           </div>
           <!-- Add Pagination -->
           <div class="swiper-pagination"></div>
-          <div class="zoomable"></div>
+        </div>
+        <div class="zoomable">
+          <div id="draggable" class="zoomable-image-wrapper">
+            <img  class="zoomable-image" src="assets/img/gallery/maxhaust-1.jpg" alt="">
+          </div>
         </div>
       </div>
-     
+      
     </section>
     <section class="main-videos" id="videos">
       <div class="container">
         <h1 class="custom-font">Видео</h1>
         <h2 class="custom-font-secondary">Видео</h2>
+        <div class="swiper-container swiper-container-videos">
+          <div class="swiper-wrapper swiper-wrapper-videos">
+            <div class="swiper-slide swiper-slide-videos">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/Kznn6NldWnc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="swiper-slide swiper-slide-videos">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/tEn2CspPxp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="swiper-slide swiper-slide-videos">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/dknyL1QJNV0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="swiper-slide swiper-slide-videos">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/OQpS7nipEtI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="swiper-slide swiper-slide-videos">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/OQpS7nipEtI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+           <!-- Add Pagination -->
+          <div class="swiper-pagination"></div>
+          <!-- Add Arrows -->
+          <div class="swiper-button-next swiper-button-white"></div>
+          <div class="swiper-button-prev swiper-button-white"></div>
+        </div>
       </div>
     </section>
     <section class="order" id="order">
