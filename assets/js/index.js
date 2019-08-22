@@ -18,6 +18,27 @@ $( document ).ready(function() {
     }, 10);
   });
 
+  $('.main-about__video-btn').on('click', function() {
+    event.preventDefault();
+    if ($(this).hasClass('pressed')) {
+      $('.main-about__video-container').removeClass('main-about__video-container--visible');
+      $(this).removeClass('pressed');
+      $(this).html('Видео');
+    } else {
+      $('.main-about__video-container').addClass('main-about__video-container--visible');
+      $(this).addClass('pressed');
+      $('.main-about__video-btn.pressed').html('Cкрыть');
+    }
+  })
+
+  $('.input--tel').on('focus', function() {
+    $(this).attr('placeholder', '+375-(xx)-xxx-xx-xx');
+  })
+
+  $('.input--tel').on('focusout', function() {
+    $(this).attr('placeholder', 'Телефон');
+  })
+
   swiperGal = new Swiper('.swiper-container.swiper-container-gallery', {
     effect: 'coverflow',
     grabCursor: true,
@@ -41,7 +62,7 @@ $( document ).ready(function() {
     },
   });
 
-  swiperVid = new Swiper('.swiper-container.swiper-container-videos', {
+  let swiperVid = new Swiper('.swiper-container.swiper-container-videos', {
     pagination: {
       el: '.swiper-pagination',
     },
@@ -50,6 +71,16 @@ $( document ).ready(function() {
       prevEl: '.swiper-button-prev',
     },
   });
+
+  // let swiperQuestions = new Swiper('.swiper-container.swiper-container-questions', {
+  //   direction: 'vertical',
+  //   slidesPerView: 1,
+  //   autoHeight: true,
+  //   pagination: {
+  //     el: '.swiper-pagination',
+  //     clickable: true,
+  //   },
+  // });
 
   checkWidth();
 
@@ -64,7 +95,6 @@ $( document ).ready(function() {
   $('.zoomable').click(function() {
     $('.zoomable').removeClass('zoomable--active');
   })
-
 });
 
 

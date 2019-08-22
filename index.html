@@ -48,7 +48,7 @@
         <span>M</span>axhaus<span>T</span>
       </h1>
       <h2>Unleash your beast</h2>
-      <a href="" class="btn main-btn">Посмотреть</a>
+      <a href="#examples" class="btn main-btn">Посмотреть</a>
     </div>
   </header>
   <main class="main">
@@ -56,7 +56,11 @@
       <div class="container">
         <h1 class="custom-font">О нас</h1>
         <h2 class="custom-font-secondary">О нас</h2>
-        <p class="main-about__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, quia voluptate? Cumque, explicabo ipsa atque ullam, quaerat repellat facere quam, magnam illo et repellendus voluptatum deleniti quod assumenda quidem nihil quia officia ipsam qui ab esse. Aliquam sit vero repellat culpa nulla inventore laboriosam maxime. Autem quia, totam corporis nihil maxime similique quas sint repellendus vero. Quisquam quo alias adipisci minus incidunt voluptas nulla, labore mollitia quos laboriosam eveniet veniam corporis animi dicta perspiciatis aut ducimus nobis maiores quia cum! Quod dolorem magni pariatur esse optio, quos consequatur, iusto accusamus deleniti quis quibusdam hic praesentium sint, aliquid necessitatibus atque nemo?</p>
+        <p class="main-about__text">Мы специализируемся на продаже и установке высококлассных электронных звуковых систем <strong>Maxhaust</strong>. Звуковые системы <strong>Maxhaust</strong> работают с нашим высококачественным приводом, который может воспроизводить подлинные звуки выхлопа, считывание которых происходит со звуковых модулей, подключенных к системе авто по <em>CAN</em> шине, чтобы достигать <em>1 : 1 об/мин</em> и звука выхлопа.
+          <br>
+          <br>
+          <em>Результат - безошибочная, объемная и агрессивная звуковая характеристика.</em></p>
+        <button class="main-about__video-btn">Видео</button>
         <div class="main-about__video-container-wrapper">
           <div class="main-about__video-container">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/fxaJ7c119hQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -65,7 +69,7 @@
       </div>
       <div class="main-about__maxhaust"></div>
     </section>
-    <section class="main-gallery id="examples">
+    <section class="main-gallery" id="examples">
       <div class="container">
         <h1 class="custom-font">Текст</h1>
         <h2 class="custom-font-secondary">Галерея</h2>
@@ -120,29 +124,95 @@
         </div>
       </div>
     </section>
-    <section class="order" id="order">
+    <section class="main-order" id="order">
       <div class="container">
         <h1 class="custom-font">Заказ</h1>
         <h2 class="custom-font-secondary">Сделать заказ</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga minus doloremque impedit labore corrupti provident velit, placeat, doloribus qui error quia consequuntur quam nemo distinctio animi sunt porro perferendis voluptate?</p>
+        <p><em><span class="star">*</span> помечены поля обязательные к заполнению</em></p>
         <form action="">
-          <input type="text" class="input" placeholder="Ваше имя" name="name" required>
-          <input type="text" class="input input--tel" placeholder="Телефон" name="email" required>
+          <input type="text" class="input" placeholder="Ваше имя*" name="name" required>
+          <input type="text" class="input input--tel" placeholder="Телефон*" name="email" required>
           <input type="text" class="input" placeholder="Email" name="email">
           <textarea name="message" class="text-area" placeholder="Комментарий"></textarea>
           <button class="btn btn-submit" type="submit">Заказать</button>
         </form>
       </div>
     </section>
-    <section class="main-location" id="location">
+    <section class="main-questions" id="questions">
       <div class="container">
-        <h1 class="custom-font">Месторасположение</h1>
-        <h2 class="custom-font-secondary">Наше месторасположение</h2>
+        <h1 class="custom-font">Частые вопросы</h1>
+        <h2 class="custom-font-secondary">Частые вопросы</h2>
+        <!-- <div class="swiper-container swiper-container-questions">
+          <div class="swiper-wrapper swiper-wrapper-questions">
+            <div class="swiper-slide swiper-slide-questions">
+              <div class="question-title">Можно ли отключить систему?</div>
+              <div class="question-answer">Да. Система может быть отключена и выключена (в зависимости от автомобиля) с помощью кнопок оригинального управления автомобиля, а также через приложение.</div>
+            </div>
+            <div class="swiper-slide swiper-slide-questions">
+              <div class="question-title">Можно ли управлять системой через профили моего автомобиля или с помощью других кнопок?</div>
+              <div class="question-answer">Да. Для большинства автомобилей также можно управлять профилями вождения, такими как «Drive Select» (Comfort, Auto, Dynamic) для Audi или «Agility Control» для Mercedes. Кроме того, такие ключи, как ESP или круиз-контроль, также возможны. Предпочтительный вариант можно установить через приложение для смартфона.</div>
+            </div>
+            <div class="swiper-slide swiper-slide-questions">
+              <div class="question-title">Слышен ли звук внутри автомобиля?</div>
+              <div class="question-answer">Да. В зависимости от выбранного профиля, исполнительные механизмы «OUT-SOUND» также могут быть услышаны внутри. 
+                Привод «МОТОР» можно услышать только в передней части автомобиля. В интерьере это едва заметно.</div>
+            </div>
+            <div class="swiper-slide swiper-slide-questions">
+              <div class="question-title">Нужно ли устанавливать 2 привода, если у меня двойная выхлопная система ?
+              </div>
+              <div class="question-answer">Нет. Это не имеет ничего общего с выхлопной системой. Звук распространяется под автомобилем.</div>
+            </div>
+            <div class="swiper-slide swiper-slide-questions">
+              <div class="question-title">Какие звуки есть?</div>
+              <div class="question-answer">Модуль Maxhaust Sound имеет множество предустановленных звуков. Мы постоянно разрабатываем новые звуки. Затем мы предоставляем их для бесплатного скачивания через приложение.</div>
+            </div>
+            <div class="swiper-slide swiper-slide-questions">
+              <div class="question-title">Нужно ли кодировать автомобиль после сборки?</div>
+              <div class="question-answer">Нет.  Система готова к использованию сразу после установки</div>
+            </div>
+          </div>
+        
+          <div class="swiper-pagination"></div>
+        </div> -->
+
+          <div class="question-title">Можно ли отключить систему?</div>
+          <div class="question-answer">Да. Система может быть отключена и выключена (в зависимости от автомобиля) с помощью кнопок оригинального управления автомобиля, а также через приложение.</div>
+          <hr>
+          <div class="question-title">Можно ли управлять системой через профили моего автомобиля или с помощью других кнопок?</div>
+          <div class="question-answer">Да. Для большинства автомобилей также можно управлять профилями вождения, такими как «Drive Select» (Comfort, Auto, Dynamic) для Audi или «Agility Control» для Mercedes. Кроме того, такие ключи, как ESP или круиз-контроль, также возможны. Предпочтительный вариант можно установить через приложение для смартфона.</div>
+          <hr>
+          <div class="question-title">Слышен ли звук внутри автомобиля?</div>
+          <div class="question-answer">Да. В зависимости от выбранного профиля, исполнительные механизмы «OUT-SOUND» также могут быть услышаны внутри. 
+            Привод «МОТОР» можно услышать только в передней части автомобиля. В интерьере это едва заметно.</div>
+          <hr>
+          <div class="question-title">Нужно ли устанавливать 2 привода, если у меня двойная выхлопная система ?
+          </div>
+          <div class="question-answer">Нет. Это не имеет ничего общего с выхлопной системой. Звук распространяется под автомобилем.</div>
+          <hr>
+          <div class="question-title">Какие звуки есть?</div>
+          <div class="question-answer">Модуль Maxhaust Sound имеет множество предустановленных звуков. Мы постоянно разрабатываем новые звуки. Затем мы предоставляем их для бесплатного скачивания через приложение.</div>
+          <hr>
+          <div class="question-title">Нужно ли кодировать автомобиль после сборки?</div>
+          <div class="question-answer">Нет.  Система готова к использованию сразу после установки</div>
+      </div>
+    </section>
+    <section class="main-contacts" id="contacts">
+      <div class="container">
+        <h1 class="custom-font">Контакты</h1>
+        <h2 class="custom-font-secondary">Контакты</h2>
+        <div class="contacts-info">
+          <p><span>Наш адрес</span></p>
+          <p><span>Телефон</span></p>
+        </div>
       </div>
     </section>
   </main>
   <footer class="footer">
-
+    <div class="footer-container">
+      <div class="logo-container">
+        <img class="footer-logo" src="assets/img/maxhaust-footer-logo.png" alt="maxhaust-logo">
+      </div>
+    </div>
   </footer>
  
   <script type="text/javascript" src="assets/js/index.js"></script>
