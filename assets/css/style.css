@@ -419,8 +419,7 @@ a {
 
 .main-maxhaust__text {
     position: relative;
-    top: 3rem;
-    right: 0;
+    bottom: -3rem;
     height: auto;
     opacity: 1;
     visibility: visible;
@@ -428,7 +427,7 @@ a {
 }
 
 .main-maxhaust__text.main-maxhaust__text--hidden{
-    right: -30rem;
+    bottom: -30rem;
     height: 0;
     visibility: hidden;
     opacity: 0;
