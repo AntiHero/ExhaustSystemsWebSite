@@ -6,9 +6,9 @@ $( document ).ready(function() {
     $('.overlay').toggleClass('menu-open');
 
     if ($('.menu').hasClass('active')) {
-      $("body").css("overflow","hidden");
+      $("body").css("overflow-y","hidden");
     } else {
-      $("body").css("overflow","auto");
+      $("body").css("overflow-y","auto");
     }
     
   });
@@ -115,13 +115,13 @@ $( document ).ready(function() {
     if ($(event.target).hasClass('swiper-slide-active')) {
       $('.zoomable').addClass('zoomable--active');
       $('.zoomable-image').attr('src', event.target.style.backgroundImage.split('("')[1].split('")')[0]);
-      $("body").css("overflow","hidden");
+      $("body").css("overflow-y","hidden");
     }
   })
   
   $('.zoomable').click(function() {
     $('.zoomable').removeClass('zoomable--active');
-    $("body").css("overflow","auto");
+    $("body").css("overflow-y","auto");
   })
 });
 
