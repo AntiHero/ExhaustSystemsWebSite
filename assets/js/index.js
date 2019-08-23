@@ -24,12 +24,39 @@ $( document ).ready(function() {
       $('.main-about__video-container').removeClass('main-about__video-container--visible');
       $(this).removeClass('pressed');
       $(this).html('Видео');
+      document.getElementById('main-video').contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
     } else {
       $('.main-about__video-container').addClass('main-about__video-container--visible');
       $(this).addClass('pressed');
       $('.main-about__video-btn.pressed').html('Cкрыть');
     }
-  })
+  });
+
+  $('.main-maxhaust__btn').on('click', function() {
+    event.preventDefault();
+    if ($(this).hasClass('pressed')) {
+      $('.main-maxhaust__text').addClass('main-maxhaust__text--hidden');
+      $(this).removeClass('pressed');
+      $(this).html('Читать');
+    } else {
+      $('.main-maxhaust__text.main-maxhaust__text--hidden').removeClass('main-maxhaust__text--hidden');
+      $(this).addClass('pressed');
+      $('.main-maxhaust__btn.pressed').html('Cвернуть');
+    }
+  });
+
+  $('.main-questions__btn').on('click', function() {
+    event.preventDefault();
+    if ($(this).hasClass('pressed')) {
+      $('.main-questions__text').addClass('main-questions__text--hidden');
+      $(this).removeClass('pressed');
+      $(this).html('Далее');
+    } else {
+      $('.main-questions__text.main-questions__text--hidden').removeClass('main-questions__text--hidden');
+      $(this).addClass('pressed');
+      $('.main-questions__btn.pressed').html('Cвернуть');
+    }
+  });
 
   $('.input--tel').on('focus', function() {
     $(this).attr('placeholder', '+375-(xx)-xxx-xx-xx');
@@ -45,7 +72,7 @@ $( document ).ready(function() {
     centeredSlides: true,
     slidesPerView: 1,
     loop: true,
-    slidesPerView: 7,
+    loopedSlides: 16,
     coverflowEffect: {
       rotate: 15,
       stretch: 0,
@@ -53,18 +80,14 @@ $( document ).ready(function() {
       modifier: 1,
       slideShadows : true,
     },
-    zoom: {
-      maxRatio: 3,
-      containerClass: 'swiper-zoom-container',
-    },
     pagination: {
-      el: '.swiper-pagination',
+      el: '.swiper-pagination.swiper-pagination-gallery',
     },
   });
 
   let swiperVid = new Swiper('.swiper-container.swiper-container-videos', {
     pagination: {
-      el: '.swiper-pagination',
+      el: '.swiper-pagination.swiper-pagination-videos',
     },
     navigation: {
       nextEl: '.swiper-button-next',
@@ -72,15 +95,12 @@ $( document ).ready(function() {
     },
   });
 
-  // let swiperQuestions = new Swiper('.swiper-container.swiper-container-questions', {
-  //   direction: 'vertical',
-  //   slidesPerView: 1,
-  //   autoHeight: true,
-  //   pagination: {
-  //     el: '.swiper-pagination',
-  //     clickable: true,
-  //   },
-  // });
+  let swiperAdvantages = new Swiper('.swiper-container.swiper-container-advantages', {
+    direction: 'vertical',
+    centeredSlides: true,
+    slidesPerView: 1,
+  });
+
 
   checkWidth();
 
