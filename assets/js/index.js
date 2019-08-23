@@ -6,9 +6,9 @@ $( document ).ready(function() {
     $('.overlay').toggleClass('menu-open');
 
     if ($('.menu').hasClass('active')) {
-      $("body").css("overflow-y","hidden");
+      $("body").css("overflow","hidden");
     } else {
-      $("body").css("overflow-y","auto");
+      $("body").css("overflow","auto");
     }
     
   });
@@ -16,6 +16,7 @@ $( document ).ready(function() {
   $('.nav-link').on('click', function() {
     $('.overlay').toggleClass('menu-open');
     $('.menu').toggleClass('active');
+    $("body").css("overflow","auto");
   });
 
   $('.main-btn').on('click', function() {
@@ -115,13 +116,13 @@ $( document ).ready(function() {
     if ($(event.target).hasClass('swiper-slide-active')) {
       $('.zoomable').addClass('zoomable--active');
       $('.zoomable-image').attr('src', event.target.style.backgroundImage.split('("')[1].split('")')[0]);
-      $("body").css("overflow-y","hidden");
+      $("body").css("overflow","hidden");
     }
   })
   
   $('.zoomable').click(function() {
     $('.zoomable').removeClass('zoomable--active');
-    $("body").css("overflow-y","auto");
+    $("body").css("overflow","auto");
   })
 });
 

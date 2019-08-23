@@ -19,7 +19,6 @@ html, body {
     font-size: 10px;
     font-family: 'Roboto', sans-serif;
     scroll-behavior: smooth;
-    overflow-x: hidden;
 }
 
 body { 
@@ -788,6 +787,7 @@ a {
     -ms-flex-align: center;
     -webkit-align-items: center;
     align-items: center;
+    cursor: grab;
 }
 
 /*Section - Contacts*/
@@ -843,3 +843,23 @@ a {
 
 /*Media queries*/
 
+@media (min-width:320px)  { /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */ }
+@media (min-width:480px)  { /* smartphones, Android phones, landscape iPhone */ }
+@media (min-width:600px)  { /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */ }
+@media (min-width:801px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ }
+@media (min-width:1025px) { 
+    /* big landscape tablets, laptops, and desktops */ 
+    .header-text h1 {
+        font-size: 7rem;
+        margin-bottom: 4rem;
+    }
+
+    .header-text h1 span {
+        font-size: 9rem;
+    }
+
+    .header-text h2 {
+        font-size: 3rem;
+    }
+}
+@media (min-width:1281px) { /* hi-res laptops and desktops */ }
