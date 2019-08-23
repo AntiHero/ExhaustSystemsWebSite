@@ -310,7 +310,6 @@ a {
 
 .nav .overlay ul li {
     text-transform: uppercase;
-    
 }
 
 .nav .overlay ul li a:after {
@@ -859,6 +858,10 @@ a {
     }
 
     .header-text h2 {
+        font-size: 3rem;
+    }
+
+    .nav .overlay ul li a {
         font-size: 3rem;
     }
 }
