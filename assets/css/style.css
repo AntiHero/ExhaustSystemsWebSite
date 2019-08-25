@@ -911,6 +911,10 @@ a {
         z-index: 102;
     }
 
+    .swiper-container.swiper-container-advantages {
+        margin-top: -4rem;
+    }
+
 }
 @media (min-width:1025px) { 
     /* big landscape tablets, laptops, and desktops */ 
