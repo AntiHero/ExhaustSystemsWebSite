@@ -812,6 +812,7 @@ a {
 
 #map {
     height: 300px;
+    z-index: 1;
 }
 
 /*Footer*/
@@ -920,6 +921,7 @@ a {
         background: none;
         opacity: initial;
         transform: initial;
+        z-index: 9999;
     }
 
     .nav {
