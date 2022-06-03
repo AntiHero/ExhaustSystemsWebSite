@@ -670,6 +670,7 @@ a {
     border: 2px solid var(--main-font-light-gray);
     border-radius: 2px;
     background: rgba(255, 255, 255, .9);
+    resize: none;
     color: #878787;
 }
 
@@ -800,6 +801,19 @@ a {
     padding-bottom: 2rem;
 }
 
+.contacts-info p {
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.contacts-tel {
+    text-decoration: underline;
+}
+
+#map {
+    height: 300px;
+}
+
 /*Footer*/
 .footer {
     width: 100%;
@@ -833,6 +847,10 @@ a {
     text-decoration: none;
     color: var(--main-black-color);
     transition: all .4s;
+}
+
+.footer-media ul li a img {
+    height: 40px;
 }
 
 .footer-media ul li {
